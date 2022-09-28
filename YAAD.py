@@ -130,3 +130,4 @@ cos = np.dot(vad,self_data[vadums].T.values)/norms*norms2
 self_data[cols[:]] = np.transpose(cos)[:]
 
 self_data.to_csv("E:/ABDO/Graduation project/Datasets/Kaggle/g2p7vwxyn2-1/ECG_GSR_Emotions/Self-Annotation Labels/Self_annotation(cosinecheck).csv")
+#otifi
