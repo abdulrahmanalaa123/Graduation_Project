@@ -37,7 +37,7 @@ mapper = dict(zip(tuples,values))
 print(mapper)
 
 df[cols] = pd.DataFrame(list(map(lambda x:mapper[x],list(map(tuple,(temp[identifiers].values))))))
-
+#the 5000 samples aarent ordered are actually selected randomly(i think) from 10000 values
 timestamps = np.arange(0,39,1/256)
 renamedict = dict(zip(array,timestamps))
 df = df.rename(columns = renamedict)
