@@ -1,7 +1,8 @@
 # DataSets
 
 # CASE
-## Keyword:Functional Data Analysis
+## Keywords
+Functional Data Analysis
 ## Notes:
   DAQ: data aquisition file contains all the sensors
   joystick values are the position of the joystick is mapped to [0.5,9.5] for x is valence and y is arousal to map those values
