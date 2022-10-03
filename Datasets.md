@@ -24,7 +24,7 @@ valence arousal mapping to discrete emotions (kinda referenced in the paper but 
 https://gitlab.com/karan-shr/case_dataset/-/tree/master/
 
 # probable datasets
-##1-ASCERTAIN Dataset(need accesss):
+## 1-ASCERTAIN Dataset(need accesss):
   58 users,36 clip
   each user watch stimuli clip and this data recorded alongside the video
   recorded data: ECG,GSR,EEG,Facial landmark trajectories
