@@ -10,7 +10,17 @@ Functional Data Analysis
   frequency of the sampling sensors are set to 1k HZ and the joystick is at 20HZ the mapping method is still yet to be figured out
   
 The data is a continous annoation of users emotions using VA model while watching a video stimuli(movie) and is done in different orders except the first 2 starting movies which I think is the neutral videos to start off on the same basis and then record the fluctuations and the analysis process is documented in the paper here:
-https://www.researchgate.net/publication/331296934_A_functional_data_analysis_approach_for_continuous_2-D_emotion_annotations
+https://www.nature.com/articles/s41597-019-0209-0
+
+## Modalities
+ecg: data from the Electrocardiogram sensor.
+bvp: data from the Blood Volume Pulse sensor.
+gsr: data from the Galvanic Skin Response sensor.
+rsp: data from the Respiration sensor.
+skt: data from the Skin Temperature sensor.
+emg_zygo: data from the Surface Electromyography (sEMG) sensor placed on the  Zygomaticus major muscles.
+emg_coru: data from the Surface Electromyography (sEMG) sensor placed on the Corrugator supercilli muscles.
+emg_trap: data from the Surface Electromyography (sEMG) sensor placed on the Trapezius muscles.
 
 ## Functional Analysis:
 https://anson.ucdavis.edu/~mueller/Review151106.pdf
