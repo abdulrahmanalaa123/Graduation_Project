@@ -31,9 +31,9 @@ https://gitlab.com/karan-shr/case_dataset/-/tree/master/
 ## user data annotated
     Personality scores for 5 Personality traits: Extraversion, Agreeableness, Conscientiousness, Emotional Stabily, Openness
     self report:Arousal, Valence, Engagement, Liking, Familiarity
+## ASCERTAIN paper (need access for full pdf):https://ieeexplore.ieee.org/abstract/document/7736040
+    they focus on Emotion and Personality Recognition using physiological signals mentioned above ,study physiological correlation of emotion and personality(not fully understood ,don't know if it's helpful or not yet)
 ## 2-Mahinob needs access:
   ECG, EEG (32 channels), respiration amplitude, and skin temperature
   https://mahnob-db.eu/hci-tagging/
   any more data about the sampling method or the values itself could be found after gaining access
-## ASCERTAIN paper (need access for full pdf):https://ieeexplore.ieee.org/abstract/document/7736040
-    they focus on Emotion and Personality Recognition using physiological signals mentioned above ,study physiological correlation of emotion and personality(not fully understood ,don't know if it's helpful or not yet)
