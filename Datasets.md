@@ -31,13 +31,14 @@ Extracting,ECG,BVP from ppg signals,transforming bvp to ecg and its accuracy
 ## Note:
   the bvp read from the samsung watch was using its ppg sensor which he used the raw input values he got from making the app in the tizen os and applied certain methods mentioned in the methods section in the paper to extract the bvp from them which the same method was used in empatica and samsung where in the empatica the bvp  is calculated using the empatica sdk or (os) while the method of transformation could be found here i think:
   https://support.empatica.com/hc/en-us/articles/204954639-Utilizing-the-PPG-BVP-signal
-
+  https://www.nature.com/articles/s41597-022-01262-0#Sec2
 ## Raised Questions:
 Legitemacy of the relation between bvp and ecg?
 GSR and its relation to the bioimpedance?
 GSR,EDA,SKT,SCL and the relation of all?
 Transformation of the ppg into either ECG and BVP?
 Variation in sensors in higher end watches than the ppg sensor?
+Tizen:https://docs.tizen.org/application/native/guides/location-sensors/device-sensors/#heart-rate-monitor-led-green-sensor for the ppg values
 # probable datasets
 ## 1-ASCERTAIN Dataset(need accesss):
   58 users,36 clip
