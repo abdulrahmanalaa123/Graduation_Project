@@ -41,3 +41,7 @@ https://gitlab.com/karan-shr/case_dataset/-/tree/master/
 WESAD:https://cdn.discordapp.com/attachments/681869328466837514/1026668931341099050/unknown.png
 SWEll:https://easy.dans.knaw.nl/ui/datasets/id/easy-dataset:58624/tab/2
 (best because it applies a reallife situation)
+
+
+# References(models and data understanding)
+emognition.pwr.edu.pl/home
