@@ -37,3 +37,7 @@ https://gitlab.com/karan-shr/case_dataset/-/tree/master/
   ECG, EEG (32 channels), respiration amplitude, and skin temperature
   https://mahnob-db.eu/hci-tagging/
   any more data about the sampling method or the values itself could be found after gaining access
+## 3-Stress datasets we dont know how would they be useful:
+WESAD:https://cdn.discordapp.com/attachments/681869328466837514/1026668931341099050/unknown.png
+SWEll:https://easy.dans.knaw.nl/ui/datasets/id/easy-dataset:58624/tab/2
+(best because it applies a reallife situation)
