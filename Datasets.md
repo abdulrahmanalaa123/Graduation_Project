@@ -33,7 +33,11 @@ Extracting,ECG,BVP from ppg signals,transforming bvp to ecg and its accuracy
   https://support.empatica.com/hc/en-us/articles/204954639-Utilizing-the-PPG-BVP-signal
 
 ## Raised Questions:
-
+Legitemacy of the relation between bvp and ecg?
+GSR and its relation to the bioimpedance?
+GSR,EDA,SKT,SCL and the relation of all?
+Transformation of the ppg into either ECG and BVP?
+Variation in sensors in higher end watches than the ppg sensor?
 # probable datasets
 ## 1-ASCERTAIN Dataset(need accesss):
   58 users,36 clip
