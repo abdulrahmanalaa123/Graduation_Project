@@ -23,7 +23,17 @@ valence arousal mapping to discrete emotions (kinda referenced in the paper but 
 ## anything else needed and the dataset itself can be found here:
 https://gitlab.com/karan-shr/case_dataset/-/tree/master/
 
-# 
+# Emognition
+## Brief
+  Subjects were issued to watch a movie clip with a baseline video of dots and lines to measure the baseline emotion where between each video and the other each subject is exposed to a 2 min video of a baseline refresher to not mix the emotions between the different stimulis
+## Keywords:
+Extracting,ECG,BVP from ppg signals,transforming bvp to ecg and its accuracy
+## Note:
+  the bvp read from the samsung watch was using its ppg sensor which he used the raw input values he got from making the app in the tizen os and applied certain methods mentioned in the methods section in the paper to extract the bvp from them which the same method was used in empatica and samsung where in the empatica the bvp  is calculated using the empatica sdk or (os) while the method of transformation could be found here i think:
+  https://support.empatica.com/hc/en-us/articles/204954639-Utilizing-the-PPG-BVP-signal
+
+## Raised Questions:
+
 # probable datasets
 ## 1-ASCERTAIN Dataset(need accesss):
   58 users,36 clip
