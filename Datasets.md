@@ -23,6 +23,7 @@ valence arousal mapping to discrete emotions (kinda referenced in the paper but 
 ## anything else needed and the dataset itself can be found here:
 https://gitlab.com/karan-shr/case_dataset/-/tree/master/
 
+# 
 # probable datasets
 ## 1-ASCERTAIN Dataset(need accesss):
   58 users,36 clip
@@ -31,8 +32,9 @@ https://gitlab.com/karan-shr/case_dataset/-/tree/master/
 ## user data annotated
     Personality scores for 5 Personality traits: Extraversion, Agreeableness, Conscientiousness, Emotional Stabily, Openness
     self report:Arousal, Valence, Engagement, Liking, Familiarity
-## ASCERTAIN paper (need access for full pdf):https://ieeexplore.ieee.org/abstract/document/7736040
-    they focus on Emotion and Personality Recognition using physiological signals mentioned above ,study physiological correlation of emotion and personality(not fully understood ,don't know if it's helpful or not yet)
+## ASCERTAIN paper (need access for full pdf):
+  https://ieeexplore.ieee.org/abstract/document/7736040
+  they focus on Emotion and Personality Recognition using physiological signals mentioned above ,study physiological correlation of emotion and personality(not fully     understood ,don't know if it's helpful or not yet)
 ## 2-Mahinob needs access:
   ECG, EEG (32 channels), respiration amplitude, and skin temperature
   https://mahnob-db.eu/hci-tagging/
@@ -41,7 +43,9 @@ https://gitlab.com/karan-shr/case_dataset/-/tree/master/
 WESAD:https://cdn.discordapp.com/attachments/681869328466837514/1026668931341099050/unknown.png
 SWEll:https://easy.dans.knaw.nl/ui/datasets/id/easy-dataset:58624/tab/2
 (best because it applies a reallife situation)
-
-
+## 4-Biraffe
+  ECG,EDA,GSR
+  useful:signals timestamped so could be trained using the VA
+  issues:the null values of the EDA,personality traits affect the emotion recognition while it isnt used in the rest
 # References(models and data understanding)
 emognition.pwr.edu.pl/home
