@@ -39,6 +39,30 @@ GSR,EDA,SKT,SCL and the relation of all?
 Transformation of the ppg into either ECG and BVP?
 Variation in sensors in higher end watches than the ppg sensor?
 Tizen:https://docs.tizen.org/application/native/guides/location-sensors/device-sensors/#heart-rate-monitor-led-green-sensor for the ppg values
+#BIOVID
+
+## Brief:
+A huge database of 94 participants watching a set of 3 movie clips for each 
+discrete emotion the most important thing is that the classification has been done
+on 5 discrete emotions(amusement,sad,angry,fear,disgust) where the biosignals taken
+was taken from the video which achieved the required emotion by the highest degree
+
+## pros:
+A high range of age starting from 18 till 65 with a relative 50/50 male to female ratio
+the exact numbers mentioned in the paper and there is a plethora of data in the database
+any exact numbers or further info could be found here:
+https://www.researchgate.net/publication/309779509_BioVid_Emo_DB_A_Multimodal_Database_for_Emotion_Analyses_validated_by_Subjective_Ratings
+## cons:
+-Although each video was taken with the highest associativity the final emotion isn't certainly
+discrete where the association of the amusement clips for example was 7/10 and 1.63 in sadness
+and 1.28 in anger and 1.09 in disgust and 1.22 in fear and this was the general analysis couldnt
+be measuered on each sample as well as these values are very close when it comes to anger and
+sadness.
+-As well as the discoordinated of the video lengths its not the same across the whole dataset
+where it starts from 32 to 245 second where we could take a snip of a continous 32 secs of each
+clip to standardize our data
+
+
 # probable datasets
 ## 1-ASCERTAIN Dataset(need accesss):
   58 users,36 clip
