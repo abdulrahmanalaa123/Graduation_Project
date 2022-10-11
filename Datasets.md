@@ -89,28 +89,43 @@ SWEll:https://easy.dans.knaw.nl/ui/datasets/id/easy-dataset:58624/tab/2
   
 ## 5-DREAMER:
   .signals : ECG(recorded from two channels : (right arm --> left leg(used in feature extraction), left arm --> right leg), 256 Hz, ), EEG
+  
   .participants : 23, age (22,33)(14 male, 9 female)
+  
   .sensors : emotiv epoc for eeg, shimmer3 for ecg
+  
   .target model :VAD model, SAM for evaluate VAD in 1-5 scale, 9 emotions (amusement, excitement, happiness, calmness, anger, disgust, fear, sadness,and surprise)
+  
   .stimulus : 18 film clips selected and evaluated by Gabert-Quillen et al{https://link.springer.com/article/10.3758/s13428-014-0500-0}, caputring data during the last     60 s,
   
   description :
     .classification results for valence, arousal and dominance of the proposed database are comparable to the ones achieved for other databases that use non-portable,      expensive, medical grade devices, These results indicate the prospects of using low cost devices for affect recognition                                                   {https://link.springer.com/chapter/10.1007/978-94-007-4722-7_30} 
+    
     .the experiment started with showing particpants neutral film clips to have no valeance and avoid any daily dependencies during recording physiological signals,        using neutral signal as a baseline 
+  
   useful:
     . background section in research paper --> there are related works on various datasets 
+    
     . evaluation of self-assessment --> apply some statistical analysis methods to analyze variation between participants, comparing between this study and Gabert-           Quillen study(rating film clips)
+    
     . ecg based feature extraction --> statistical measures, and range from each part of the PQRST complexes,Pan-Tompkins QRS detection algorithm       used to detect       the locations of QRS complexes within the ECG signal and accurately detect R-peaks, difference between consecutive RR intervals (root mean square       error ),       PSD(power spectral denisty) for high freq and low freq, low freq and high freq ratio, total power, HR, HRV
+    
     . baseline normlization of features --> recordings of the last 4 s of the neutral film clip shown before each affect eliciting film clip, Then, each EEG and ECG-         based feature is divided by the corresponding baseline feature. Due to the division of the extracted features by the baseline features, the derived normalised         feature contains information about the relation of the initial feature to the background activity, i.e. activity that is present in the data but is not modulated       by actual affective stimuli. As a result, the feature normalisation method employed, attempts to remove or strongly attenuate the background activity in order to       obtain only stimuli-related changes in the ECG recordings
+    
+    
     . discussion --> ANOVA and statistical tests on confusion matrix and evaluation metrics values, outlier analysis
+  
   issues:
     . signals collected from sensors not from smartwatch --> accuracy of values during validation 
+    
     . frequency of ecg smaples 
+    
     . accuracy of ecg extracted features (60% for each V,A,D) may be good 
   
   more info {https://myresearchspace.uws.ac.uk/ws/files/1077176/Accepted_Author_Manuscript.pdf}
 ## 6-wrist and ankle:
   .sensors : customized smart bracelet with built-in accelerometer
+  
   .signals : accelerometer data(x,y,z)
 
   description :
@@ -126,11 +141,14 @@ SWEll:https://easy.dans.knaw.nl/ui/datasets/id/easy-dataset:58624/tab/2
 
 useful :
 	.How to deal with accelerometer data in data preprocess and feature engineering phase
+	
 	.Models used in classification phase
 
 issues:
 	.Customized smart bracelet values of accelerometer may differ from smart watch accelerometer values
+	
 	.emotion detection based on only 3 emotions (neutral, happy, anger), then comparison between pairs of emotions
+	
 	.Dataset collected and building models on wrist and ankle , in our model we will ignore ankle
  
  more info{https://peerj.com/preprints/1650.pdf}
