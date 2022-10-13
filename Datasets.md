@@ -62,32 +62,7 @@ sadness.
 where it starts from 32 to 245 second where we could take a snip of a continous 32 secs of each
 clip to standardize our data
 
-
-# probable datasets
-## 1-ASCERTAIN Dataset(need accesss):
-  58 users,36 clip
-  each user watch stimuli clip and this data recorded alongside the video
-  recorded data: ECG,GSR,EEG,Facial landmark trajectories
-## user data annotated
-    Personality scores for 5 Personality traits: Extraversion, Agreeableness, Conscientiousness, Emotional Stabily, Openness
-    self report:Arousal, Valence, Engagement, Liking, Familiarity
-## ASCERTAIN paper (need access for full pdf):
-  https://ieeexplore.ieee.org/abstract/document/7736040
-  they focus on Emotion and Personality Recognition using physiological signals mentioned above ,study physiological correlation of emotion and personality(not fully     understood ,don't know if it's helpful or not yet)
-## 2-Mahinob needs access:
-  ECG, EEG (32 channels), respiration amplitude, and skin temperature
-  https://mahnob-db.eu/hci-tagging/
-  any more data about the sampling method or the values itself could be found after gaining access
-## 3-Stress datasets we dont know how would they be useful:
-WESAD:https://cdn.discordapp.com/attachments/681869328466837514/1026668931341099050/unknown.png
-SWEll:https://easy.dans.knaw.nl/ui/datasets/id/easy-dataset:58624/tab/2
-(best because it applies a reallife situation)
-## 4-Biraffe
-  ECG,EDA,GSR
-  useful:signals timestamped so could be trained using the VA
-  issues:the null values of the EDA,personality traits affect the emotion recognition while it isnt used in the rest
-  
-## 5-DREAMER:
+# DREAMER:
   .signals : ECG(recorded from two channels : (right arm --> left leg(used in feature extraction), left arm --> right leg), 256 Hz, ), EEG
   
   .participants : 23, age (22,33)(14 male, 9 female)
@@ -126,7 +101,7 @@ SWEll:https://easy.dans.knaw.nl/ui/datasets/id/easy-dataset:58624/tab/2
    . accuracy of ecg extracted features (60% for each V,A,D) may be good 
   
   more info {https://myresearchspace.uws.ac.uk/ws/files/1077176/Accepted_Author_Manuscript.pdf}
-## 6-wrist and ankle:
+# wrist and ankle:
   .sensors : customized smart bracelet with built-in accelerometer
   
   .signals : accelerometer data(x,y,z)
@@ -155,6 +130,29 @@ issues:
 .Dataset collected and building models on wrist and ankle , in our model we will ignore ankle
  
  more info{https://peerj.com/preprints/1650.pdf}
-
+ 
+# probable datasets
+## 1-ASCERTAIN Dataset(need accesss):
+  58 users,36 clip
+  each user watch stimuli clip and this data recorded alongside the video
+  recorded data: ECG,GSR,EEG,Facial landmark trajectories
+## user data annotated
+    Personality scores for 5 Personality traits: Extraversion, Agreeableness, Conscientiousness, Emotional Stabily, Openness
+    self report:Arousal, Valence, Engagement, Liking, Familiarity
+## ASCERTAIN paper (need access for full pdf):
+  https://ieeexplore.ieee.org/abstract/document/7736040
+  they focus on Emotion and Personality Recognition using physiological signals mentioned above ,study physiological correlation of emotion and personality(not fully     understood ,don't know if it's helpful or not yet)
+## 2-Mahinob needs access:
+  ECG, EEG (32 channels), respiration amplitude, and skin temperature
+  https://mahnob-db.eu/hci-tagging/
+  any more data about the sampling method or the values itself could be found after gaining access
+## 3-Stress datasets we dont know how would they be useful:
+WESAD:https://cdn.discordapp.com/attachments/681869328466837514/1026668931341099050/unknown.png
+SWEll:https://easy.dans.knaw.nl/ui/datasets/id/easy-dataset:58624/tab/2
+(best because it applies a reallife situation)
+## 4-Biraffe
+  ECG,EDA,GSR
+  useful:signals timestamped so could be trained using the VA
+  issues:the null values of the EDA,personality traits affect the emotion recognition while it isnt used in the rest
 # References(models and data understanding)
 emognition.pwr.edu.pl/home
