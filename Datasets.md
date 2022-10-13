@@ -155,10 +155,10 @@ SWEll:https://easy.dans.knaw.nl/ui/datasets/id/easy-dataset:58624/tab/2
   useful:signals timestamped so could be trained using the VA
   issues:the null values of the EDA,personality traits affect the emotion recognition while it isnt used in the rest
   ## 5-Toronto emotional speech set (TESS)
-    *Emotion detection by voice
-    *Files are available to download --> https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP2/E8H2MF
-    *A set of 200 target words were spoken in the carrier phrase "Say the word _____" by two actresses (aged 26 and 64 years) and recordings were made of the set           portraying each of seven emotions (anger, disgust, fear, happiness, pleasant surprise, sadness, and neutral). There are 2800 stimuli in total. The two actresses       were recruited from the Toronto area. Both actresses speak English as their first language, are university educated, and have musical training. Audiometric             testing indicated that both actresses have thresholds within the normal range
-    *Research paper link --> https://fui.edu.pk/fjs/index.php/fujeas/article/view/321/140 
+    Emotion detection by voice
+    Files are available to download --> https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP2/E8H2MF
+    A set of 200 target words were spoken in the carrier phrase "Say the word _____" by two actresses (aged 26 and 64 years) and recordings were made of the set           portraying each of seven emotions (anger, disgust, fear, happiness, pleasant surprise, sadness, and neutral). There are 2800 stimuli in total. The two actresses       were recruited from the Toronto area. Both actresses speak English as their first language, are university educated, and have musical training. Audiometric             testing indicated that both actresses have thresholds within the normal range
+    Research paper link --> https://fui.edu.pk/fjs/index.php/fujeas/article/view/321/140 
     
 # References(models and data understanding)
 emognition.pwr.edu.pl/home
