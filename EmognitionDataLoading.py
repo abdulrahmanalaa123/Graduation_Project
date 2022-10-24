@@ -44,8 +44,6 @@ for dir in directors:
                 #    rows[i].append(dataf)
                 #only works on making the data without resetting the timer
                 dataframes = list(map(lambda x :pd.DataFrame(x).set_index(0).T,list(itemgetter(*srings)(dat))))
-                print("complete")
-                print(dataframes)
                 rows[i].append(key)
                 categ = list(itemgetter(*getter)(vad[key][0]))
                 cont = list(itemgetter(*maps)(vad[key][1]))
