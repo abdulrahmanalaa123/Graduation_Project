@@ -10,7 +10,7 @@ path = "E:/ABDO/Graduation project/Datasets/Emognition/_study_data/"
 directors = []
 directors = os.listdir(path)
 print(directors)
-experiment = ["STIMULUS","QUESTIONNAIRES"]
+experiment = ["WASHOUT","STIMULUS","QUESTIONNAIRES"]
 maps = ["VALENCE","AROUSAL","MOTIVATION"]
 srings = ["heartRate","PPInterval","BVPRaw","BVPProcessed"]
 getter = ["AWE", "DISGUST", "SURPRISE", "ANGER", "ENTHUSIASM", "LIKING", "FEAR", "AMUSEMENT", "SADNESS"]
