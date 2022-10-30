@@ -52,7 +52,6 @@ for dir in directors:
 
                 lenhr = max(lenhr,len(hrpp))
                 lenbvp = max(lenbvp,len(procbvp))
-                print(lenhr,lenbvp)
                 hr[i].extend(hrpp)
                 bvp[i].extend(procbvp)
                 emotions[i].append(key)
@@ -79,7 +78,6 @@ bvpdat = pd.DataFrame(data = bvp,columns = bvpcols[:-1])
 
 hrdat[emotioncols] = emotions
 bvpdat[emotioncols] = emotions
-print(hrdat)
-print(bvpdat)
+
 hrdat.to_pickle("E:/ABDO/Graduation project/Datasets/Emognition/hr(tuples).pkl")
 bvpdat.to_pickle("E:/ABDO/Graduation project/Datasets/Emognition/bvp(tuples).pkl") 
