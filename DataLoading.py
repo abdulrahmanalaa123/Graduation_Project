@@ -82,6 +82,8 @@ hrdat = pd.DataFrame(data = hr,columns = hrcols)
 
 bvpdat = pd.DataFrame(data = bvp,columns = bvpcols[:-1])
 
+hrdat = hrdat.fillna(0)
+bvpdat = bvpdat.fillna(0)
 hrdat[emotioncols] = emotions
 bvpdat[emotioncols] = emotions
 print(times)
