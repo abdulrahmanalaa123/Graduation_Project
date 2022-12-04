@@ -14,8 +14,8 @@ def getter(x):
 def hrdata(dat):
     return dat.applymap(lambda x:getter(x))
 def encoder(data,colum):
-    
     replacer = dict(zip(data[colum].unique(),range(len(data[colum].unique()))))
+    print(replacer)
     temp = data[colum].replace(replacer)
     print(temp)
     return temp
@@ -47,8 +47,8 @@ def sampler(dat):
     np.random.shuffle(finaltrain)
     finaltest = np.delete(finaltest,0,axis = 0)
     np.random.shuffle(finaltest)
-    targettrain = np.array(list(map(get,finaltrain))).reshape(-1,1)
-    targettest = np.array(list(map(get,finaltest))).reshape(-1,1)
+    targettrain = np.array(list(map(get,finaltrain)))
+    targettest = np.array(list(map(get,finaltest)))
     finaltrain = np.delete(finaltrain,terminal,axis = 1)
     finaltest = np.delete(finaltest,terminal,axis = 1)
     return finaltrain,finaltest,targettrain,targettest
