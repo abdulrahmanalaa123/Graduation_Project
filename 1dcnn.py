@@ -18,18 +18,17 @@ if __name__ == "__main__":
     print(test_target.shape)
     print(np.isnan(X_train.astype(float)).sum())
     model = tf.keras.Sequential()
-    model.add(tf.keras.layers.Conv1D(filters = 128,kernel_size=3,activation="relu",input_shape = (X_train.shape[1],1)))
-    model.add(tf.keras.layers.Conv1D(filters=128, kernel_size=3, activation='relu'))
-    #model.add(tf.keras.layers.Dropout(0.3))
-    #model.add(tf.keras.layers.AveragePooling1D(pool_size=2))
-    #model.add(tf.keras.layers.Flatten())
+    model.add(tf.keras.layers.Conv1D(filters = 64,kernel_size=3,activation="relu",input_shape = (X_train.shape[1],1)))
+    model.add(tf.keras.layers.Conv1D(filters=64, kernel_size=3, activation='relu'))
+    model.add(tf.keras.layers.Dropout(0.5))
+    model.add(tf.keras.layers.AveragePooling1D(pool_size=2))
+    model.add(tf.keras.layers.Flatten())
     model.add(tf.keras.layers.Dense(units = 100,activation="relu"))
-    model.add(tf.keras.layers.Dense(units = 64,activation="relu"))
-    model.add(tf.keras.layers.Dense(1,activation="softmax"))
+    model.add(tf.keras.layers.Dense(11,activation="softmax"))
     print(model.summary())
     model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     history = model.fit(X_train,train_target,validation_split = 0.2
-        ,batch_size = 128,epochs = 50
+        ,batch_size = 32,epochs = 50
         ,callbacks = [
             tf.keras.callbacks.EarlyStopping(
                 monitor = "val_loss",
@@ -38,6 +37,7 @@ if __name__ == "__main__":
             )
         ]
     )
+    print(model.evaluate(X_test,test_target,verbose=0)[1])
 
 
 
