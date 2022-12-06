@@ -5,22 +5,25 @@ import numpy as np
 from random import sample
 from operator import itemgetter
 import math
-def getter(x):
+def getter(x,index):
     if isinstance(x,tuple):
-        return itemgetter(0)(x)
+        return itemgetter(index)(x)
     else:
         return x
 
-def hrdata(dat):
-    return dat.applymap(lambda x:getter(x))
+def splittuple(dat,index):
+    return dat.applymap(lambda x:getter(x,index))
+
 def encoder(data,colum):
     replacer = dict(zip(data[colum].unique(),range(len(data[colum].unique()))))
     print(replacer)
     temp = data[colum].replace(replacer)
     print(temp)
     return temp
+
 def get(x):
     return itemgetter(-1)(x)
+
 def sampler(dat):
     mask = dat["Stage"] == "STIMULUS"
     targets = dat.loc[mask,"Target"].unique()
@@ -44,22 +47,27 @@ def sampler(dat):
 
     terminal = finaltrain.shape[1]-1
     finaltrain = np.delete(finaltrain,0,axis = 0)
-    np.random.shuffle(finaltrain)
+    #np.random.shuffle(finaltrain)
     finaltest = np.delete(finaltest,0,axis = 0)
-    np.random.shuffle(finaltest)
+    #np.random.shuffle(finaltest)
     targettrain = np.array(list(map(get,finaltrain)))
     targettest = np.array(list(map(get,finaltest)))
     finaltrain = np.delete(finaltrain,terminal,axis = 1)
     finaltest = np.delete(finaltest,terminal,axis = 1)
+
+
+    print("Final test after:"+str(finaltest.shape))
+
     return finaltrain,finaltest,targettrain,targettest
+
+
 
 if __name__ == "__main__":
     data = pd.read_pickle("E:/ABDO/Graduation project/Datasets/Emognition/hr(tuples).pkl")
-    newdat = hrdata(data)
     list1 = [[12,23,251,21],[21321,12,41,2],[124,214,124,5]]
     
     print(list(map(get,list1)))
-    X_train,X_test,train_target,test_target = sampler(newdat)
+    X_train,X_test,train_target,test_target = sampler(data)
     print(len(X_train))
     print(len(X_test))
     print(len(train_target))
