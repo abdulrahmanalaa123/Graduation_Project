@@ -1,7 +1,7 @@
 import tensorflow as tf
 import pandas as pd
 import numpy as np
-from Datacheck import sampler,splittuple,encoder
+from Datacheck import sampler,splittuple,encoder,evensampler
 from sklearn.preprocessing import normalize
 
 def cnn1d(shape,convlayers=2,layers = 2,unit = 100,func="relu",output="11",filter = 64,kernel = 3,dropout= 0.5):
@@ -35,11 +35,15 @@ if __name__ == "__main__":
     print(data)
     #code for including ppinterval is commented in case we dont need it acc 66%
     ppinterval = splittuple(data,1)
-    X_train,X_test,train_target,test_target = sampler(hrdat)
+    X_train,X_test,train_target,test_target = evensampler(hrdat)
+
     #put in case you need ppinterval
-    #X_train2,X_test2,_,_ = sampler(ppinterval)
-    #X_train = np.dstack((X_train,X_train2))
-    #X_test = np.dstack((X_test,X_test2))
+    X_train2,X_test2,_,_ = evensampler(ppinterval)
+    X_train = np.dstack((X_train,X_train2))
+    X_test = np.dstack((X_test,X_test2))
+    #X_train=X_train[:,:1300,:]
+    #X_test =X_test[:,:1300,:]
+    print(X_train)
     
     #X_train = np.asarray(X_train).astype("float32")
     #X_test = np.asarray(X_test3).astype("float32")
@@ -48,21 +52,23 @@ if __name__ == "__main__":
     print(train_target.shape)
     print(test_target.shape)
     #replace with 1dcnn if you want to try
-    model = lstmo((X_train.shape[1],1),lstmlayer = 2)
-    print(model.summary())
-    model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-    history = model.fit(X_train,train_target,validation_split = 0.2
-        ,batch_size = 11,epochs = 50
-        ,callbacks = [
-            tf.keras.callbacks.EarlyStopping(
-                monitor = "val_loss",
-                patience = 5,
-                restore_best_weights=True
-            )
-        ]
-    )
-    print(model.evaluate(X_test,test_target,verbose=0)[1])
-
+    avgacc = []
+    for _ in range(10):
+        model = cnn1d((X_train.shape[1],2))
+        model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+        history = model.fit(X_train,train_target,validation_split = 0.2
+            ,batch_size = 11,epochs = 50
+            ,callbacks = [
+                tf.keras.callbacks.EarlyStopping(
+                    monitor = "val_loss",
+                    patience = 5,
+                    restore_best_weights=True
+                )
+            ]
+        )
+        avgacc.append(model.evaluate(X_test,test_target,verbose=0)[1])
+    print(f"mean:{np.mean(avgacc)} and std : {np.std(avgacc)}")
+    print(avgacc)
 
 
 
