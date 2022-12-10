@@ -2,7 +2,7 @@ from re import L
 import pandas as pd
 import json
 import numpy as np
-from random import sample
+import random
 from operator import itemgetter
 import math
 def getter(x,index):
@@ -33,10 +33,11 @@ def sampler(dat):
     finaltest = np.zeros(shape=(1,6291))
     finaltrain = np.zeros(shape=(1,6291))
 
-
+    random.seed(123)
     for target in targets:
         mask2 = dat["Target"] == target
-        trainpar = sample(participants,trainval)
+        trainpar = random.sample(participants,trainval)
+        print(trainpar)
         testpar = list(set(participants).symmetric_difference(set(trainpar)))
         masktrain = dat["Participant"].isin(trainpar)
         masktest = dat["Participant"].isin(testpar)
@@ -45,30 +46,42 @@ def sampler(dat):
         finaltrain = np.vstack((finaltrain,train))
         finaltest = np.vstack((finaltest,test))
 
-    terminal = finaltrain.shape[1]-1
-    finaltrain = np.delete(finaltrain,0,axis = 0)
+
+    finaltrain = finaltrain[1:,:]
     #np.random.shuffle(finaltrain)
-    finaltest = np.delete(finaltest,0,axis = 0)
+    finaltest = finaltest[1:,:]
     #np.random.shuffle(finaltest)
-    targettrain = np.array(list(map(get,finaltrain)))
-    targettest = np.array(list(map(get,finaltest)))
-    finaltrain = np.delete(finaltrain,terminal,axis = 1)
-    finaltest = np.delete(finaltest,terminal,axis = 1)
+    targettrain = finaltrain[:,-1:]
+    targettest = finaltest[:,-1:]
+    finaltrain = finaltrain[:,:6290]
+    finaltest = finaltest[:,:6290]
 
 
-    print("Final test after:"+str(finaltest.shape))
 
     return finaltrain,finaltest,targettrain,targettest
 
+def evensampler(data):
+    mask = data["Stage"] == "STIMULUS"
+    participants = data["Participant"].unique()
+    trainval = int(0.7*len(participants))
+    trainpar = participants[:trainval]
+    testpar = participants[trainval:]
+    masktrain = data["Participant"].isin(trainpar)
+    masktest = data["Participant"].isin(trainpar)
+    train = data.loc[mask&masktrain,data.columns[2:-13]].values
+    traintarget = data.loc[mask&masktest,"Target"].values
+    test = data.loc[mask&masktrain,data.columns[2:-13]].values
+    testtarget = data.loc[mask&masktest,"Target"].values
 
-
+    return train,test,traintarget,testtarget
 if __name__ == "__main__":
     data = pd.read_pickle("E:/ABDO/Graduation project/Datasets/Emognition/hr(tuples).pkl")
-    list1 = [[12,23,251,21],[21321,12,41,2],[124,214,124,5]]
+    list1 = np.array([[12,23,251,21],[21321,12,41,2],[124,214,124,5]])
     
-    print(list(map(get,list1)))
+    list1 = list1[1:,:3]
+    print(list1)
     X_train,X_test,train_target,test_target = sampler(data)
-    print(len(X_train))
-    print(len(X_test))
+    print(X_train.shape)
+    print(X_test.shape)
     print(len(train_target))
     print(len(test_target))
