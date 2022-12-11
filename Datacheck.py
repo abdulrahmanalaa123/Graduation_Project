@@ -67,10 +67,10 @@ def evensampler(data):
     trainpar = participants[:trainval]
     testpar = participants[trainval:]
     masktrain = data["Participant"].isin(trainpar)
-    masktest = data["Participant"].isin(trainpar)
+    masktest = data["Participant"].isin(testpar)
     train = data.loc[mask&masktrain,data.columns[2:-13]].values
-    traintarget = data.loc[mask&masktest,"Target"].values
-    test = data.loc[mask&masktrain,data.columns[2:-13]].values
+    traintarget = data.loc[mask&masktrain,"Target"].values
+    test = data.loc[mask&masktest,data.columns[2:-13]].values
     testtarget = data.loc[mask&masktest,"Target"].values
 
     return train,test,traintarget,testtarget
