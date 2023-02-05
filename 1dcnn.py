@@ -250,7 +250,7 @@ def headjoiner(models: list,index,layers = 1,unit = 100,func = "softsign",output
     really useful link as well:
     https://stackoverflow.com/questions/53942291/what-does-the-00-of-the-layers-connected-to-in-keras-model-summary-mean
 
-    explains how each layer is a node and carries the structure along wiht it no need to 
+    explains how each layer is a node and carries the structure along wiht it no need to reinitialzie the whole model in the same scope to call its attributes from one layer
     """
     flats = [mod.layers[ind].output for ind,mod in zip(index,models)]
     print(models[0].layers[index[0]]._inbound_nodes)
