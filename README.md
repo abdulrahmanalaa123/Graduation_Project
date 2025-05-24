@@ -115,10 +115,7 @@ This project demonstrates:
 * Shell scripting for simulating complex systems
 
 ---
-
 ## Author
-
 Created by Ahmed Otifi
 🔗 GitHub: https://github.com/otifi3
-
 ```
