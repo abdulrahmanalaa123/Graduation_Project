@@ -1,8 +1,3 @@
-Thanks! Here's the updated `README.md` including the **table metadata file** details, which stores schema info separately from the data file. This helps better mimic a real DBMS architecture.
-
----
-
-```markdown
 # 🗄️ Bash-Based DBMS (Lightweight Shell Database Engine)
 
 ## Overview
@@ -109,7 +104,6 @@ UPDATE students SET name="Bobby" WHERE id=2;
 DELETE FROM students WHERE id=1;
 ```
 
----
 
 ## 🧠 Educational Value
 
